@@ -1,0 +1,148 @@
+
+def split_and_join(line):
+    words = line.split()
+    new_line = '-'.join(words)
+    
+    return new_line
+    
+if __name__ == '__main__':
+    line = input()
+    result = split_and_join(line)
+    print(result)
+
+
+
+#take a sentence input form use and revese the sentence word by word 
+l=input().split()
+print(l)
+l=l[::-1]
+print(" ".join(l))  #correct
+print(*l)           #correct
+
+
+hackerrank
+# Complete the 'print_full_name' function below.
+#
+# The function is expected to return a STRING.
+# The function accepts following parameters:
+#  1. STRING first
+#  2. STRING last
+#
+
+def print_full_name(first, last):
+    full_name = f"{first} {last}"
+    print("Hello", full_name + "!", "You just delved into python.")
+
+
+if __name__ == '__main__':
+    first_name = input()
+    last_name = input()
+    print_full_name(first_name, last_name)
+
+
+
+s="snehabai"
+s=s+'0'
+print(s)
+
+s="jayalakshmi"
+for i in s:
+    print(i)
+
+s="jayalakshmi"
+print(s[:4])
+
+s="jayalakshmi"
+print(s[4:])
+
+s="hi_hello_i_am_studying"
+print(s[::-1])
+print(s[3:8])
+print(s[-8:-3])
+print(s[::1])
+print(s[::2])
+s="123456789"
+print(s[::1])
+print(s[::2])
+print(s[::3])
+
+a=range(1,10)
+a=str(a)
+print(a,type(a),a[0])
+#for type casting use join function
+a=['1','2','3','4']
+a=" ".join(a)
+print(a,type(a),a[0])
+
+s="ballari institute of tech and management"
+print(s.capitalize())
+print(s.casefold())
+
+print(s.count('e'))
+print(s.startswith('ba'))
+print(s.startswith('i',8,16))
+
+print(s.endswith('t'))
+print(s.split("i"))
+print(s.partition('i')) 
+
+print(s.isalnum())
+print(s.find('y'))
+print(s.index('b'))
+print(s.isidentifier())
+
+
+s=input()
+s=s.swapcase()
+print(s)
+
+
+#covert list of integer element
+l=input().split()      #input should be int
+print(l,type(l))
+
+
+l=[int(i) for i in input().split()]
+print(l)
+
+l=input().split()      #input should be int  
+print(l,type(l))
+
+
+#take a sentence input form use and revese the sentence word by word 
+l=input().split()
+print(l)
+l=l[::-1]
+print(" ".join(l))  #correct
+print(*l)           #correct
+
+
+
+l=[0,9,6,7,3,4,5]
+print(sorted(l))  #only sorts 
+print(l)    #doesnt make any change to original list 
+print(l.sort()) #this makes ckange to the original list and returns none
+print(l)  #sorted output
+
+list=['abc','dg','erf','gyyyie','huenygf']
+list.sort(key=len)
+print(list)  #the list is sorted
+
+l2=[[2,3,4],[5,6],[0,9],[1,0,3]]
+l2.sort(key=lambda a:a[0]+a[1],reverse=True) #descendingorder
+print(l2)
+
+l3=[[2,3,4],[5,6],[0,9],[1,0,3]]
+l3.sort(key=lambda a:a[0]+a[1],reverse=False)   #ascending order
+print(l3)
+
+l4=[[2,3,4],[5,6],[0,9],[1,0,3]]
+print(max(l4))
+print(max(l4,key=lambda a:a[-1]))
+print(min(l4,key=lambda a:a[-1]))
+
+a=[1,2,3,4]
+b=a.copy()
+b[0]=5
+print(a)
+print(b)

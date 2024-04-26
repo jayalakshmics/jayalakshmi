@@ -1,0 +1,144 @@
+program 1
+#find weather the given number is even or odd
+
+num=int(input("enter:"))
+if(num%2==0):
+    print("num is even")
+else:
+    print("num is odd") 
+
+
+program 2
+#check if num is positive or negative
+
+num=float(input())
+if(num>0):
+    print("num is +ve")
+elif(num<0):
+    print("num is -ve")
+else:
+    print("num is zero")
+
+
+
+program 3
+#this ia a correct leap year program
+
+year=int(input())
+if(year%4==0):
+        if(year%100==0):
+            if(year%400==0):
+                print("leap year")
+            else:
+                print("not a leap year")
+        else:
+            print("leap year")
+else:
+    print("not a leap year")
+    
+#reduced statements for leap year program
+year=int(input())
+if(year%100==0 and year%400==0):
+    print("leap year")
+elif(year%100!=0 and year%4==0):
+    print("leap year")
+else:
+    print("not a leap year")
+
+#still reduced form of leap year program
+
+year=int(input())
+if((year%100==0 and year%400==0) or (year%100!=0 and year%4==0)):
+    print("leap year")
+else:
+    print("not a leap year")
+
+#very simplified program for leap year
+
+year=int(input())
+if(year%400==0 or year%100!=0 and year%4==0):
+    print("leap year")
+else:
+    print("not a leap year")
+    
+
+program 4
+#find out waeather the given number is odd or even without using arthemtic operators
+
+x=int(input())            
+temp=x>>1
+if(x-2*temp==0):         #note: here i used both bitwise and arthematic operators
+    print("given num is +ve")
+else:
+    print("-ve num")
+
+#the other way is by using bitwise & operator
+#finding out the giveb number is odd or even using bitwise & operator
+
+num=int(input())
+if(num & 1 == 0):
+    print("num is even")
+else:
+    print("num is odd")
+
+
+program 5
+#check the given height
+
+height=float(input())
+if(height>6):
+    print("gaint")
+elif(4<=height<=6):
+    print("average")
+elif(height<4):
+    print("daurf")
+
+program 6
+#use of match which is similar to switch
+
+char=input("enter the char ")
+match char:
+    case "a":
+        print("a is vowel")
+    case "e":
+        print("e is vowel")
+    case "i":
+        print("i is vowel")
+    case "o":
+        print("o is vowel")
+    case "u":
+        print("u is vowel") 
+    case _:
+        print("not a vowel")
+
+ 
+program 7
+#using membership operator
+
+char=input("enter:")
+if char in 'aeiouAEIOU':
+    print("it is a vowel")
+else:
+    print("not a vowel")
+
+program 8
+#using while loop
+s=input()
+i=0
+while i<len(s) and s[i]!=" ":
+    print(i,s[i])
+    i=i+1
+
+#using for loop
+s=input()
+for i in range(len(s)):
+    if s[i]==" ":
+        break
+    print(i,s[i])
+
+program 9
+#take a string from the user and print all the vowels of the string 
+s=input()
+for i in s:
+    if i in "aeiouAEIOU":
+        print(i)

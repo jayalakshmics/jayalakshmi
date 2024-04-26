@@ -1,0 +1,29 @@
+#program1
+import random
+name=input("name:")
+l=['lazy','depressed','annoying','wow','beautiful','handsome','good','bad','dad"sgirl','mom"sboy','attitude','psycho','very nice','deja vu']
+print(name ,"is",random.choice(l))
+
+
+
+#program 2
+import random
+name=input("name:")
+l=['lazy','depressed','annoying','wow','beautiful','handsome','good','bad','dad"sgirl','mom"sboy','attitude','psycho','very nice','deja vu']
+s=['is','makes','will be','is always']
+print(name ,random.choice(s),random.choice(l))
+
+program 3
+num1=int(input("num1:"))
+num2=float(input("num2:"))
+sum=num1+num2
+print(sum)
+
+
+program 4
+name=input("name:")
+age=int(input("age:"))
+adress=input("adress:")
+print(name)
+print(age)
+print(adress)

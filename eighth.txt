@@ -1,0 +1,392 @@
+program 1
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+    
+class sll:
+    def __init__(self):
+        self.head=None
+    
+    def insertatfront(self,data):
+        if self.head==None:
+            self.head=node(data)
+        else:
+            new=node(data)
+            new.next=self.head
+            self.head=new
+    
+    def insertatend(self,data):
+        if self.head==None:
+            self.head=node(data)
+        else:
+            new=node(data)
+            i=self.head
+            while i.next:
+                i=i.next
+                i.next=new
+
+    def length(self):
+        i=self.head
+        count=0
+        while i:
+            count+=1
+            i=i.next
+        return count
+
+    def printing(self):
+        if self.head==None:
+            return
+        else:
+            i=self.head
+            while i:
+                print(i.data)
+                i=i.next
+        
+l=[1,2,3,4,5]
+ob=sll()
+ob.length()
+
+for i in l:
+    ob.insertatfront(i)
+ob.printing()
+for i in l:
+    ob.insertatend(i)
+ob.printing()
+
+
+program 2
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+        self.prev=None
+    
+class dll:
+    def __init__(self):
+        self.head=None
+        self.tail=None
+
+    def insertatfront(self,data):
+        if self.head==None:
+            self.head=node(data)
+            self.tail=self.head
+        else:
+            new=node(data)
+            new.next=self.head
+            self.head=new
+    
+    def insertatend(self,data):
+        if self.head==None:
+            self.head=node(new)
+            self.tail=self.head
+        else:
+            new=node(data)
+            self.tail.next=new
+            new.prev=self.tail
+            self.tail=new
+    
+    def reverse(self):
+        curr=self.head
+        while curr:
+            if curr.next==none:
+                self.head=curr                         # a,b=2,3
+            curr.next,curr.prev=curr.prev,curr.next    #a,b=b,a    (swap)
+            curr=curr.prev                             # o/p b=2,a=3
+
+    def deleteatfront(self):
+        temp.hesd=self.head.next
+        self.head.prev=None
+
+    def deleteatend(self):
+        self.tail=self.tail.prev
+        self.tail.next=None
+
+    def printing(self):
+        if self.head==None:
+            return 
+        else:
+            i=self.head
+            while i:
+                print(i.data)
+                i=i.next
+
+l=list(map(int,input().split()))      
+#l=[1,2,3,4]
+ob=dll()
+for i in l:
+    ob.insertatfront(i)
+ob.printing()
+for i in l:
+    ob.insertatend(i)
+ob.printing()
+for i in l:
+    ob.reverse(i)
+ob.printing()
+
+ob.deleteatend()
+ob.printing()
+
+ob.deleteatfront()
+ob.printing()
+
+
+#swap variables,this logic is used for reversing dll
+"""a=7
+b=8
+a,b=b,a
+print(a,b)"""
+
+
+program 3
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+    
+class sll:
+    def __init__(self):
+        self.head=None
+    
+    def insertatfront(self,data):
+        if self.head==None:
+            self.head=node(data)
+        else:
+            new=node(data)
+            new.next=self.head
+            self.head=new
+    
+    def insertatend(self,data):
+        if self.head==None:
+            self.head=node(data)
+        else:
+            new=node(data)
+            i=self.head
+            while i.next:
+                i=i.next
+                i.next=new
+
+    def reverse(self,data):
+        self.nxt=None
+        self.prev=None
+        curr=self.head
+        nxt=self.head.next
+        while curr:
+            curr.next=prev
+            prev=curr
+            curr=nxt
+            if nxt:
+                nxt=nxt.next
+        self.head=self.prev
+
+    def deleteatend(self):
+        i=self.head
+        while i.next.next:
+            i=i.next
+        i.next=none
+
+    def length(self):
+        i=self.head
+        count=0
+        while i:
+            count+=1
+            i=i.next
+        return count
+
+    def printing(self):
+        if self.head==None:
+            return
+        else:
+            i=self.head
+            while i:
+                print(i.data)
+                i=i.next
+        
+#l=[1,2,3,4,5]
+l=list(map(int,input().split()))      
+ob=sll()
+ob.length()
+
+for i in l:
+    ob.insertatfront(i)
+ob.printing()
+for i in l:
+    ob.insertatend(i)
+ob.printing()
+for i in l:
+    ob.reverse(i)
+ob.printing()
+
+
+program 4
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+    
+class sll:
+    def __init__(self):
+        self.head=None
+    
+    def insertatfront(self,data):
+        if self.head==None:
+            self.head=node(data)
+        else:
+            new=node(data)
+            new.next=self.head
+            self.head=new
+    
+    def insertatend(self,data):
+        if self.head==None:
+            self.head=node(data)
+        else:
+            new=node(data)
+            i=self.head
+            while i.next:
+                i=i.next
+                i.next=new
+
+    def reverse(self,data):
+        self.nxt=None
+        self.prev=None
+        curr=self.head
+        nxt=self.head.next
+        while curr:
+            curr.next=prev
+            prev=curr
+            curr=nxt
+            if nxt:
+                nxt=nxt.next
+        self.head=self.prev
+
+    def deleteatend(self):
+        i=self.head
+        while i.next.next:
+            i=i.next
+        i.next=none
+
+    def length(self):
+        i=self.head
+        count=0
+        while i:
+            count+=1
+            i=i.next
+        return count
+
+    def printing(self):
+        if self.head==None:
+            return
+        else:
+            i=self.head
+            while i:
+                print(i.data)
+                i=i.next
+        
+#l=[1,2,3,4,5]
+l=list(map(int,input().split()))      
+ob=sll()
+ob.length()
+
+for i in l:
+    ob.insertatfront()
+ob.printing()
+for i in l:
+    ob.insertatend()
+ob.printing()
+for i in l:
+    ob.reverse(i)
+ob.printing()
+
+
+
+program 5
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+        self.prev=None
+    
+class cdll:
+    def __init__(self):
+        self.head=None
+        self.tail=None
+
+    def insertatfront(self,data):
+        if self.head==None:
+            self.head=node(data)
+            self.tail=self.head
+        else:
+            new=node(data)
+            new.next=self.head
+            self.head=new
+        self.tail.next=self.head
+        self.head.prev=self.tail
+    
+    def insertatend(self,data):
+        if self.head==None:
+            self.head=node(new)
+            self.tail=self.head
+        else:
+            new=node(data)
+            self.tail.next=new
+            new.prev=self.tail
+            self.tail=new
+        self.tail.next=self.head
+        self.head.prev=self.tail
+    
+    def reverse(self):
+        curr=self.head
+        while curr:
+            if curr.next==none:
+                self.head=curr                         # a,b=2,3
+            curr.next,curr.prev=curr.prev,curr.next    #a,b=b,a    (swap)
+            curr=curr.prev                             # o/p b=2,a=3
+
+    def deleteatfront(self):
+        temp.hesd=self.head.next
+        self.head.prev=None
+
+    def deleteatend(self):
+        self.tail=self.tail.prev
+        self.tail.next=None
+
+    def printing(self):
+        if self.head==None:
+            return 
+        else:
+            print(self.head.data)
+            i=self.head.next
+            while i!=self.head:
+                print(i.data)
+                i=i.next
+
+l=list(map(int,input().split()))      
+#l=[1,2,3,4]
+ob=cdll()
+for i in l:
+    ob.insertatfront(i)
+    ob.insertatend(i)
+ob.printing()
+
+ob.deleteatend()
+ob.deleteatfront()
+ob.printing()
+
+"""for i in l:
+    ob.insertatend(i)
+ob.printing()"""
+
+for i in l:
+    ob.reverse(i)
+ob.printing()
+
+"""ob.deleteatend()
+ob.printing()
+
+ob.deleteatfront()
+ob.printing()"""

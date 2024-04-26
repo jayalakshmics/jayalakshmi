@@ -1,0 +1,166 @@
+program  1
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+a=node(1)
+a.next=node(2)
+a.next.next=node(3)
+
+print(a,a.data,a.next)
+print(a.next,a.next.data,a.next.next)
+print(a.next.next,a.next.next.data,a.next.next.next)
+
+
+program 2
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class sll:
+    def __init__(self): #->none
+        self.head=None
+
+    def insertatbeg(self,data):
+        if self.head==None:
+            self.head=node(data)
+        else:
+            new=node(data)
+            new.next=self.head
+            self.head=new
+
+l=[1,2,3,4,5]
+ob=sll()
+for i in l:
+    ob.insertatbeg(i)
+print(ob.head.data,ob.head.next.data,ob.head.next.next.data)
+
+
+program 3
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+
+    def insertatbeg(self,head):
+        if head==None:
+            head=node(data)
+        else:
+            new=node(data)
+            new.next=head
+            head=new
+        return head
+
+l=[1,2,3,4,5]
+head=None
+for i in l:
+    head=insertatbeg(head,i)
+print(head.data,head.next.data,head.next.next.data)
+
+
+program 4
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class sll:
+    def __init_(self): #->none
+        self.head=None
+
+    def insertatbeg(self,data):
+        if self.head==None:
+            self.head=node(data)
+        else:
+            new=node(data)
+            new.next=self.head
+            self.head=new
+        
+    def printing(self):
+        if self.head==None:
+            return
+        i=self.head  #initilisation
+        while i:     #i!=None: condition
+            print(i.data)
+            i=i.next     #updation
+
+l=[1,2,3,4,5]
+ob=sll()
+for i in l:
+    ob.insertatbeg(i)
+ob.printing()
+
+program 5
+
+class node:
+    def __init__(self,data):
+        self.data=data
+        self.next=None
+class sll:
+    def __init__(self): #->none
+        self.head=None
+
+    def insertatend(self,head):
+        if self.head==None:
+            self.head=node(data)
+        else:
+            new=node(data)
+            i=self.head
+            while i.next:
+                i=i.next
+            i.next=new
+    
+    def length(self):
+        count=0
+        i=self.head
+        while i:
+            count+=1
+            i=i.next
+        return count
+
+l=[1,2,3,4,5]  #dynamically give input
+ob=sll()
+for i in l:  
+    ob.insertatend(i)
+print(ob.length())
+
+program 6
+
+import turtle
+s=turtle.Turtle()
+turtle.bgcolor("light blue")
+s.hideturtle()
+s.fillcolor("yellow")
+s.penup()
+s.goto(0,50)
+s.pendown()
+for i in range(10):
+    s.forward(100)
+    s.goto(0,50)
+    s.right(36)
+s.penup()
+s.goto(0,0)
+s.pendown()
+s.begin_fill()
+s.circle(50)
+s.end_fill()
+turtle.mainloop()
+
+
+program 7
+
+import turtle
+import colorsys
+s=turtle.Turtle()
+turtle.bgcolor("black")
+h=0.5
+s.speed(0)
+for i in range(200):
+    s.color(colorsys.hsv_to_rgb(h,1,1))
+    s.circle(100) #for circle
+    s.right(4)
+    h+=0.1
+turtle.mainloop()
