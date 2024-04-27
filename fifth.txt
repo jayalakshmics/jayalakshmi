@@ -1,0 +1,131 @@
+program 1
+
+#set is used for mathematical operation
+l=list(map(int,input().split()))      #input for list
+s=set(map(int,input().split()))       #input for set
+t=tuple(map(int,input().split()))     #input for tuple
+print(l,s,t)
+
+
+program 2
+
+a={1,5,4,8,6,7}
+print(a.add(9))
+print(a)
+print(a.pop(),a)
+print(a.discard(2),a)
+print(a.remove(2),a)
+
+
+program 3
+
+a={1,2,3}
+b={3,4,5}
+
+print(a.union(b),a,b)  #makes union but doesnt display the changrs in "a" set
+print(a.update(b),a,b)  #it doent do anywork but just display the updated content of "a" set
+print(a|b) #use bitwise or '|' for union
+
+print(a.intersection_update(b),a,b)
+print(a&b) #use bitwise and '&' for intersection
+
+print(a.difference(b),a,b) #uncomman elements from the set a
+print(a.difference_update(b),a,b)
+print(a-b) # '-' is used for difference between two sets
+
+print(a.symmetric_difference(b),a,b) #uncomman elements from both the set
+print(a^b) # '^' is used for symmetric difference between two sets
+print(a.symmetric_difference_update(b),a,b)
+
+a={2,3,4,5} #super set
+b={4,3} #subset
+
+print(a>=b) #a is a superset of b
+print(a>b)  #a is a proper superset of b
+print(a.issuperset(b))
+
+print(a<=b) #a is a subset of b
+print(a<b)  #a is a proper subset of b
+print(a.issubset(b))
+
+a={2,3,4,5} 
+b={8,9} 
+print(a.isdisjoint(b)) # no intersection is known as disjoint
+
+
+program 4
+
+d={1:23,'a':True}
+d[1]='abc'#changes the value from 23 to abc
+d['python']="yes"
+print(d,type(d))
+print(d[1]) #can acces the value using the key
+
+d={1:23,'a':"string"}
+print(d.get('a')) #get function returns the value of the key
+print(d.keys())
+print(d.values())
+print(d.items())
+
+#loops in dictionary
+d={1:23,'a':"string",'hi':"hello"}
+for i in d:
+    print(i,d[i],end=" ")
+print()
+for i,j in d.items():
+    print(i,j,end=" ")
+
+
+program 5
+
+class cse:
+    def __init__(self,name,rollno):
+        self.obj1=name
+        self.obj2=rollno
+    def fun(s):
+        print(s.obj1,s.obj2)
+s1=cse('jaya',56) 
+s2=cse('sneha',67) 
+s1.fun() #s1 is a object
+s2.fun()
+print(s1.obj1,s2.obj2)
+
+
+
+program 6
+
+class circle:
+    def __init__(self,radius):#constructor
+        self.r=radius
+    def printing(self):
+        print(3.142*self.r*self.r)
+
+class rectangle:
+    def __init__(self,length,breath):#constructor
+        self.l=l
+        self.b=b
+    def printing(self):
+        print(self.l*self.b)
+
+l=float(input())
+b=float(input())
+r=float(input())
+o=circle(r)
+o1=rectangle(1,b)
+o.printing()
+o1.printing()
+
+
+program 7
+
+#leetcode 1365
+
+nums = [8,1,2,2,3]
+l=[]
+for i in range(len(nums)): #8
+    count=0
+    for j in range(len(nums)): #8,1,2,2,3
+        if i!=j and nums[i]>nums[j]:
+            count+=1 
+    l.append(count)
+print(l)

@@ -1,0 +1,101 @@
+#program1
+
+class a:
+    def fun1(self):
+        print("fun1")
+    def fun2(self):
+        print("fun2")
+
+class b(a):
+    def __init__(self)->None:
+        print("1")
+    def __init__(self)->None:
+        print("2")
+    def fun3(self):
+        print("fun3")
+    def fun4(self):
+        print("fun4")
+
+class c(a):
+    def fun(self):
+        pass
+
+ob=a()
+p=b()
+q=c()
+c.fun1()
+b.fun2()
+
+#program 2
+
+inport turtle
+s=turtle.Turtle()
+turtle.bgcolour("blue")
+s.colour("orange")
+s.speed(0)
+for i in range(200):
+    s.circle(i)
+    s.right(5)
+turtle.mainloop()
+
+#program 3
+
+my_tuple = (1, 2, 3, 4, 2, 5,7,5,5,0)
+count_of_2 = my_tuple.count(5)
+print("Number of occurrences of 2:", count_of_2)
+index_of_4 = my_tuple.index(4)
+print("Index of 4:", index_of_4)
+
+
+# program 4
+
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+
+# Using built-in methods
+print("Keys:", my_dict.keys())
+print("Values:", my_dict.values())
+print("Items:", my_dict.items())  
+
+print("Value for key 'a':", my_dict.get('a'))
+print("Value for key 'd':", my_dict.get('d', 'Key not found'))
+
+my_dict.update({'d': 4})
+print("Updated Dictionary:", my_dict)
+
+print("Removed item:", my_dict.pop('a'))
+print("Dictionary after popping 'a':", my_dict)
+
+print("Popped item:", my_dict.popitem())
+print("Dictionary after popping an item:", my_dict) 
+
+my_dict.clear() 
+print("Cleared Dictionary:", my_dict) 
+
+program 5
+
+class VendingMachine:
+    def machine(self,num_items,item_price):
+        self.a=num_items
+        self.b=item_price
+        print(self.a,self.b)
+    def __init__(self,req_items,num_items):
+        self.c=req_items
+        self.d=money
+        print(self.c,self.d)    
+    def sufficient(self,req_items,money):
+        if(self.a>=self.c):
+            if(self.d>=self.b):
+                print("transation",n)
+                return self.d-(self.c*self.b)
+        elif(self.a < self.c):
+            print("not enough items in the machine")
+        elif(self.a >= self.c):
+            if(self.d<self.b):
+                print("not enough coins")
+x=int(input())
+y=int(input())
+p=int(input())
+q=int(input())
+ob=VendingMachine(p,q)  
+ob.machine(x,y)
+ob.sufficient(p,q)

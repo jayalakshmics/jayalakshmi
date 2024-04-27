@@ -1,0 +1,118 @@
+program 1
+
+#program on functions 
+
+def addition(x:int,y:int)->int:
+    return x+y
+a=int(input())
+b=int(input())
+c=addition(a,b)
+print(c)
+
+
+program 2
+
+#find if the given number is prime number or not 
+n=int(input())#11
+for i in range(2,n):#2,3,4,5,6,7,8,9,10  note:n here is not included i,e. it runs from 2 to n-1,, n is exclusive
+    if n%i==0:
+        print("not a prime number")
+if n==0 or n==1:
+    print("not a prime nummber")
+else:
+    print("prime number")
+
+
+#finding primr number's between two numbers 
+def isprime(n):
+    for i in range(2,n):
+        if n%i==0:
+            return False
+    if n==0 or n==1:
+        return False
+    else:
+        return True
+a=int(input())
+b=int(input())
+for i in range(a,b+1):
+    if isprime(i):
+        print(i)
+
+program 3
+
+
+"""def fun(a,*b):
+    print(a,b)
+fun(4,5,8,6,9,8,12,3,2,3,3)
+print()"""
+
+pass
+
+"""def fun(*b,a=9):
+    print(a,b)
+fun(4,5,8,6,9,8,12,
+
+pass
+
+"""def fun(a,b=0):
+    print(a,b)
+fun(2)"""
+
+pass
+
+"""a=9
+b=a
+print(id(a),id(b))"""
+
+pass 
+
+"""a=9
+b=1
+print(id(a),id(b))"""
+
+pass
+
+"""def fun(a):
+    a=10
+    print(a)
+b=0
+fun(b)
+print(b)"""
+
+pass
+
+a=[1,2,3,4]
+b=a
+b[0]=5
+print(a)
+
+
+#module package
+import thied04 as m
+m.add()
+
+#reversing a number
+
+num=int(input())
+rev=0
+temp=num 
+while(num!=0):
+    digit=num%10
+    rev=rev*10 + digit
+    num=num//10
+print(rev)
+
+
+#reversing a number
+
+n=input()
+print(n[::-1])
+
+
+#finding the num is pallindrome or not
+
+n=input()
+if n==n[::-1]:
+    print(n,"is a palindrome")
+else:
+    print(n,"is not a pallindrome")
